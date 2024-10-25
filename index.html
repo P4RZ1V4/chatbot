@@ -4,11 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot sobre Café</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+        }
+        p {
+            text-align: center;
+            color: #333;
+        }
+        .chatbot-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        iframe {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Bienvenido al Chatbot sobre Café</h1>
     <p>Haz tus preguntas sobre café aquí:</p>
-    <!-- Aquí va el iframe del chatbot -->
-    <iframe height="430" width="350" src="https://bot.dialogflow.com/f6073908-5c64-40d6-8629-5d145737a786"></iframe>
+
+    <div class="chatbot-container">
+        <iframe
+            allow="microphone;"
+            width="350"
+            height="500"
+            src="https://bot.dialogflow.com/f6073908-5c64-40d6-8629-5d145737a786">
+        </iframe>
+    </div>
 </body>
 </html>
