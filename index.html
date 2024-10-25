@@ -4,43 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot sobre Café</title>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            text-align: center;
+            margin-top: 50px;
             background-color: #f4f4f4;
         }
-        h1 {
-            text-align: center;
-            color: #4a4a4a;
-        }
-        p {
-            text-align: center;
-            color: #333;
-        }
-        .chatbot-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 30px;
-        }
-        iframe {
-            border: 2px solid #ccc;
-            border-radius: 10px;
+        df-messenger {
+            --df-messenger-button-titlebar-color: #4a4a4a;
+            --df-messenger-chat-background-color: #ffffff;
+            --df-messenger-font-color: #000000;
+            --df-messenger-send-icon: #4a4a4a;
         }
     </style>
 </head>
 <body>
     <h1>Bienvenido al Chatbot sobre Café</h1>
-    <p>Haz tus preguntas sobre café aquí:</p>
+    <p>Haz tus preguntas sobre café:</p>
 
-    <div class="chatbot-container">
-        <iframe
-            allow="microphone;"
-            width="350"
-            height="500"
-            src="https://bot.dialogflow.com/f6073908-5c64-40d6-8629-5d145737a786">
-        </iframe>
-    </div>
+    <!-- Dialogflow Messenger Integration -->
+    <df-messenger
+        intent="WELCOME"
+        chat-title="Chatbot Café"
+        agent-id="f6073908-5c64-40d6-8629-5d145737a786"
+        language-code="es">
+    </df-messenger>
 </body>
 </html>
